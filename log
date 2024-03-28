@@ -109,3 +109,22 @@ Thu 28 Mar 2024 10:00:43 PM UTC:
  tests:  10|2
 total_score: 45/70
 4a7d771
+Thu 28 Mar 2024 10:04:13 PM UTC: 
+ list.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:95:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   95 |     return NULL;
+      |            ^~~~
+list.c:93:6: note: declared here
+   93 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+list.c:96:3: error: ‘newNode’ undeclared (first use in this function); did you mean ‘Node’?
+   96 |   newNode = createNode(data);
+      |   ^~~~~~~
+      |   Node
+list.c:96:3: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+16fbea3
