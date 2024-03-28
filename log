@@ -128,3 +128,17 @@ list.c:96:3: note: each undeclared identifier is reported only once for each fun
 cc1: all warnings being treated as errors
 Compilation failed
 16fbea3
+Thu 28 Mar 2024 10:05:28 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:95:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   95 |     return NULL;
+      |            ^~~~
+list.c:93:6: note: declared here
+   93 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d032eca

@@ -93,7 +93,7 @@ void pushBack(List * list, void * data) {
 void pushCurrent(List * list, void * data) {
   if (list->current == NULL)
     return NULL;
-  newNode = createNode(data);
+  Node * newNode = createNode(data);
   newNode->next = list->current->next;
   
   if (newNode->next != NULL)
