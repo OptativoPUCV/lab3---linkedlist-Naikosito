@@ -148,3 +148,22 @@ Thu 28 Mar 2024 10:07:06 PM UTC:
  tests:  11|1
 total_score: 55/70
 55422da
+Thu 28 Mar 2024 10:13:18 PM UTC: 
+ list.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:133:48: error: expected ‘;’ before ‘)’ token
+  133 |     (list->current)->prev = list->current->prev);
+      |                                                ^
+      |                                                ;
+list.c:132:3: error: this ‘else’ clause does not guard... [-Werror=misleading-indentation]
+  132 |   else
+      |   ^~~~
+list.c:133:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+  133 |     (list->current)->prev = list->current->prev);
+      |                                                ^
+list.c:133:48: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+fbfeb03
